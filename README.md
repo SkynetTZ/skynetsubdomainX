@@ -16,6 +16,7 @@ A modern passive subdomain enumerator built for cybersecurity professionals.
 # Install
 
 ```bash
+git clone https://github.com/SkynetTZ/skynetsubdomain
 cd skynetsubdomain
 python3 -m venv .venv
 source .venv/bin/activate
