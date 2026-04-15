@@ -1,6 +1,9 @@
 # skynetsubdomainX
 A modern passive subdomain enumerator built for cybersecurity professionals.
 
+<img width="1254" height="1254" alt="hu" src="https://github.com/user-attachments/assets/8699fb4a-7fa3-4f90-b5b8-4c7587046054" />
+
+
 # Features
 
 - Multi-source passive collection:
