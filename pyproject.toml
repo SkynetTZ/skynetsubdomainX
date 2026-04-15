@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skynetsubdomain"
+version = "0.1.0"
+description = "Beautiful passive subdomain enumeration for cybersecurity professionals."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "SkyNet Security" }]
+dependencies = [
+  "requests>=2.31.0",
+  "urllib3<2",
+  "rich>=13.7.0",
+]
+
+[project.scripts]
+skynetsubdomain = "skynetsubdomain.cli:main"
+
+[tool.setuptools]
+packages = ["skynetsubdomain"]

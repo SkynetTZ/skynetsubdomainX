@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: skynetsubdomain
+Version: 0.1.0
+Summary: Beautiful passive subdomain enumeration for cybersecurity professionals.
+Author: SkyNet Security
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31.0
+Requires-Dist: urllib3<2
+Requires-Dist: rich>=13.7.0
+
+# SkyNetSubdomain
+
+`skynetsubdomain` is a modern passive subdomain enumerator built for cybersecurity professionals.
+It is inspired by Sublist3r and focuses on cleaner source handling, better resiliency, and beautiful output.
+
+## Features
+
+- Multi-source passive collection:
+  - `crt.sh`
+  - `ThreatCrowd`
+  - `HackerTarget`
+  - `Wayback Machine`
+- Built-in de-duplication and result cleaning
+- Optional DNS resolution for discovered hosts
+- Rich terminal tables and progress indicators
+- Save output directly to file
+
+## Install
+
+```bash
+cd skynetsubdomain
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -e .
+```
+
+## Usage
+
+```bash
+skynetsubdomain example.com
+```
+
+Options:
+
+- `-t, --timeout`: source request timeout (default `10`)
+- `-w, --workers`: concurrent workers (default `8`)
+- `--no-resolve`: skip DNS resolution
+- `-o, --output`: write subdomains to a file
+
+Example:
+
+```bash
+skynetsubdomain tesla.com -w 16 -o results/tesla.txt
+```
+
+## Notes
+
+- This tool is passive and only queries public sources.
+- Some APIs may rate-limit or temporarily fail; SkyNetSubdomain continues with partial results.
+- Always ensure authorization before testing domains.
